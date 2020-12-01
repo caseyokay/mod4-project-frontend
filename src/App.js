@@ -17,12 +17,26 @@ class App extends React.Component{
 
   addToFav = (article) => {
     console.log("Adding to Favorites:",  article)
-    // let favArticlesArray = []
-    // favArticlesArray.push(article);
-    this.setState({
+    const found = this.state.favArticlesArray.some(e => e.id === article.id);
+    if (!found) this.setState({
       favArticlesArray: [...this.state.favArticlesArray, article]
     })
+    
     console.log("Updated array:", this.state.favArticlesArray)
+    // let favArticlesArray = []
+    // favArticlesArray.push(article);
+    // if then: if the object exists in the favArtclesArray 
+    
+      // if (this.state.favArticlesArray.filter(e => e.id === article.id)){
+      //   this.setState({
+      //     favArticlesArray: this.state.favArticlesArray
+      //   });
+      // }
+      //   else {
+      //     console.log("ELSE")
+      // this.setState({
+      //   favArticlesArray: [...this.state.favArticlesArray, article]
+      // })}
   }
 
   // removeFromFav = (article) => {

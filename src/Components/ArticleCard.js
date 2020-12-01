@@ -13,9 +13,7 @@ class  ArticleCard extends React.Component{
     }
 
     render(){
-        // const mediaArray = this.props.articleObj.media[0];
-        // // console.log(this.props.articleObj.media[0].caption);
-        // console.log(mediaArray.caption);
+        // console.log(this.props.articleObj.media[0]["media-metadata"]);
         return(
             <div className="card" >
                 <span className="content">
