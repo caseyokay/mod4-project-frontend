@@ -6,7 +6,7 @@ import Favorites from './Containers/Favorites';
 class App extends React.Component{
   state = {
     api: [],
-    favArticlesArray: []
+    favArticlesArray: [],
   };
 
   componentDidMount(){
@@ -51,6 +51,8 @@ class App extends React.Component{
       favArticlesArray: filteredArray
     });
 }
+  
+ 
 
   render(){
     // console.log(this.state.api)
