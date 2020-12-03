@@ -27,6 +27,7 @@ class ArticlesList extends React.Component{
             <>
             <SearchForm searchValue={this.state.searchValue} changeHandler={this.searchChangeHandler}/>
             <div className="index">
+            <h1>Articles</h1>
             {this.renderArticles()}
           </div>
           </>
