@@ -14,7 +14,10 @@ class ArticlesList extends React.Component{
       }
 
     renderArticles= () => {
-        return this.props.articlesArray.map(articleObj => <ArticleCard clickHandler={this.props.clickHandler} key={articleObj.id} articleObj={articleObj}/>);
+        let filteredArray = this.props.articlesArray.filter(element => element.title.toLowerCase().includes(this.state.searchValue.toLowerCase()))
+        return filteredArray.map(articleObj => <ArticleCard clickHandler={this.props.clickHandler} key={articleObj.id} articleObj={articleObj}/>);
+
+        // return this.props.articlesArray.map(articleObj => <ArticleCard clickHandler={this.props.clickHandler} key={articleObj.id} articleObj={articleObj}/>);
     }
     
     render(){
