@@ -55,7 +55,8 @@ class App extends React.Component{
  
 
   render(){
-    // console.log(this.state.api)
+    console.log(this.state.api)
+    // h
     return (
       <div className="App">
       <ArticlesList articlesArray={this.state.api} clickHandler={this.addToFav}/>
